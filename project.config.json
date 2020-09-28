@@ -37,7 +37,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.12.2",
   "appid": "wxab03951d5272f99a",
-  "projectname": "%E4%BC%98%E8%B4%AD%E5%95%86%E5%9F%8E",
+  "projectname": "YougoMall",
   "debugOptions": {
     "hidedInDevtools": []
   },

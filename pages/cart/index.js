@@ -64,7 +64,7 @@
   3 经过以上的验证 跳转到 支付页面！ 
  */
 
-import {getSetting, chooseAddress, openSetting, showToast} from "../../utils/asyncWx"
+import {getSetting, chooseAddress, openSetting, showModal ,showToast} from "../../utils/asyncWx.js";
 //es7 用于解决提供报错异常的包
 // import regeneratorRuntime from "../../lib/runtime/runtime"
 Page({
