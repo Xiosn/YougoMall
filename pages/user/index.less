@@ -44,3 +44,92 @@ page {
     }
 }
 // 头部样式 结束
+
+// 内容 开始
+.user_content {
+    position: relative;
+    .user_main {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        color: #666;
+        transform: translateX(-50%);
+        top: -40rpx;
+        padding-bottom: 100rpx;
+
+        // 历史足迹
+        .history_wrap {
+            background-color: #fff;
+            display: flex;
+            border-radius: 10rpx;
+            navigator{
+                flex: 1;
+                text-align: center;
+                padding: 10rpx 0;
+                .his_num{
+                    color: var(--themeColor);
+                }
+                .his_name{}
+            }
+        }
+
+        // 我的订单
+        .orders_wrap {
+            background-color: #fff;
+            margin-top: 30rpx;
+            border-radius: 10rpx;
+            .orders_title {
+                padding: 20rpx;
+                border-bottom: 1rpx solid #ccc;
+            }
+            .order_content{
+                display: flex;
+                navigator{
+                    flex: 1;
+                    padding: 15rpx 0;
+                    text-align: center;
+                    .iconfont{
+                        color: var(--themeColor);
+                        font-size: 40rpx;
+                    }
+                    .order_name{}
+                }
+            }
+        }
+
+        // 收货地址管理
+        .address_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            border-radius: 10rpx;
+            padding: 20rpx;
+        }
+
+        //应用信息相关
+        .app_info_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            border-radius: 10rpx;
+            .app_info_item{
+                padding: 20rpx;
+            }
+            .app_info_contact{
+                display: flex;
+                justify-content: space-between;
+            }
+            .item_center{
+                border-top: 0.1px solid #ccc;
+                border-bottom: 0.1px solid #ccc;
+            }
+        }
+
+        //推荐
+        .recommend_wrap{
+            margin-top: 30rpx;
+            background-color: #fff;
+            padding: 20rpx;
+            border-radius: 10rpx;
+        }
+    }
+}
+// 内容 结束
