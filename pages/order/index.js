@@ -6,7 +6,7 @@
  *  (3) 渲染页面
  * 2.点击不同标题的时候，也需要重新发请求获取数据
  */
-import { request } from '../../request/http'
+import { request } from '../../request/index'
 Page({
 
   /**

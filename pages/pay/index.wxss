@@ -1,96 +1,125 @@
-page {
-  padding-bottom: 90rpx;
+/* pages/pay/index.wxss */
+Page {
+  background-color: #eaeaea;
 }
-.revice_address_row .user_info_row {
+.address {
+  height: 140rpx;
+  background-color: #fff;
   display: flex;
-  padding: 20rpx;
+  align-items: center;
+  position: relative;
 }
-.revice_address_row .user_info_row .user_info {
-  flex: 5;
-}
-.revice_address_row .user_info_row .user_phone {
-  flex: 3;
-  text-align: right;
-}
-.cart_content .cart_title {
-  padding: 20rpx;
-  font-size: 36rpx;
+.address .font-dizhi {
+  margin-left: 20rpx;
   color: var(--themeColor);
-  border-top: 1rpx solid currentColor;
-  border-bottom: 1rpx solid currentColor;
+  font-size: 30rpx;
 }
-.cart_content .cart_main .cart_item {
+.address .write {
+  color: #323232;
+  font-size: 32rpx;
+}
+.address .noAddress {
+  margin-left: 30rpx;
+  color: #acacac;
+  font-size: 28rpx;
+  position: relative;
+  top: 2rpx;
+  padding: 0 20rpx;
+  flex: 1;
+}
+.address .hasAddress {
+  position: relative;
+}
+.address .hasAddress .nameAndPhone {
   display: flex;
-  padding: 10rpx;
-  border-bottom: 1rpx solid #ccc;
+  color: #333333;
+  font-weight: 500;
+  font-size: 32rpx;
 }
-.cart_content .cart_main .cart_item .cart_img_wrap {
-  flex: 2;
+.address .hasAddress .nameAndPhone .phone {
+  margin-left: 20rpx;
+}
+.address .hasAddress .allAddress {
+  color: #919191;
+}
+.address .right {
+  position: absolute;
+  top: 40%;
+  right: 50rpx;
+  margin-left: 250rpx;
+}
+.goods-list {
+  margin: 10rpx 0 0;
+}
+.goods-list .goods-item {
+  padding: 20rpx;
+  background-color: #fff;
+  display: flex;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.goods-list .goods-item .img-wrap {
+  flex: 3;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cart_content .cart_main .cart_item .cart_img_wrap image {
-  width: 80%;
+.goods-list .goods-item .img-wrap image {
+  width: 70%;
 }
-.cart_content .cart_main .cart_item .cart_info_wrap {
-  flex: 4;
+.goods-list .goods-item .goods-info {
+  position: relative;
+  flex: 6;
+  padding-left: 20rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_name {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  color: #666;
+.goods-list .goods-item .goods-info .goods-name {
+  font-size: 32rpx;
+  color: #000;
 }
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap {
-  display: flex;
-  justify-content: space-between;
-}
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .goods_price {
-  color: var(--themeColor);
-  font-size: 34rpx;
-}
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
+.goods-list .goods-item .goods-info .goods-price-num {
   display: flex;
 }
-.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .goods_num {
-  width: 55rpx;
-  height: 55rpx;
+.goods-list .goods-item .goods-info .goods-price-num .goods-price {
+  color: #fa0000;
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+.goods-list .goods-item .goods-info .goods-price-num .goods-num {
+  position: absolute;
+  right: 60rpx;
+  top: 70%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.footer_tool {
+.pay {
   position: fixed;
   bottom: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 90rpx;
-  background-color: #fff;
   display: flex;
-  border-top: 1rpx solid #ccc;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 90rpx;
 }
-.footer_tool .total_price_wrap {
-  flex: 5;
-  padding-right: 15rpx;
-  text-align: right;
-}
-.footer_tool .total_price_wrap .total_price .total_price_text {
-  color: var(--themeColor);
-  font-size: 34rpx;
+.pay .total {
+  margin-left: 30rpx;
   font-weight: 600;
+  font-size: 32rpx;
 }
-.footer_tool .order_pay_wrap {
-  flex: 3;
+.pay .total text {
+  color: var(--themeColor);
+}
+.pay .goPay {
+  margin: 0;
+  padding: 16rpx 26rpx;
   background-color: var(--themeColor);
   color: #fff;
-  font-size: 32rpx;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 30rpx;
+  width: 180rpx;
+  line-height: 60rpx;
+  height: 100%;
+  border-radius: 0;
 }

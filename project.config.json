@@ -4,13 +4,13 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": false,
+    "newFeature": true,
     "coverView": true,
     "nodeModules": true,
     "autoAudits": false,
@@ -29,19 +29,18 @@
       "outputPath": ""
     },
     "useIsolateContext": true,
-    "useCompilerModule": true,
+    "useCompilerModule": false,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": []
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.2",
-  "appid": "wxab03951d5272f99a",
-  "projectname": "YougoMall",
+  "libVersion": "2.12.0",
+  "appid": "wx0fbf8d93185ec423",
+  "projectname": "yougou-shop",
   "debugOptions": {
     "hidedInDevtools": []
   },
-  "scripts": {},
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
@@ -59,7 +58,7 @@
       "list": []
     },
     "game": {
-      "current": -1,
+      "currentL": -1,
       "list": []
     },
     "gamePlugin": {
@@ -71,58 +70,72 @@
       "list": [
         {
           "id": -1,
-          "name": "pages/category/index",
+          "name": "分类界面",
           "pathName": "pages/category/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "商品列表",
+          "pathName": "pages/goods_list/index",
           "query": "cid=5",
           "scene": null
         },
         {
-          "id": 1,
-          "name": "pages/goods_detail/index",
+          "id": 2,
+          "name": "商品详情",
           "pathName": "pages/goods_detail/index",
-          "query": "goods_id=57444",
+          "query": "goods_id=17926",
           "scene": null
         },
         {
           "id": -1,
-          "name": "pages/cart/index",
+          "name": "购物车",
           "pathName": "pages/cart/index",
-          "query": "goods_id=57444",
+          "query": "goods_id=17926",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "购物车2",
+          "pathName": "pages/cart/cart",
+          "query": "",
           "scene": null
         },
         {
           "id": -1,
-          "name": "pages/pay/index",
+          "name": "支付",
           "pathName": "pages/pay/index",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
-          "name": "pages/auth/index",
-          "pathName": "pages/auth/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/login/index",
-          "pathName": "pages/login/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/user/index",
+          "id": 6,
+          "name": "个人中心",
           "pathName": "pages/user/index",
           "query": "",
           "scene": null
         },
         {
           "id": -1,
-          "name": "订单查询",
+          "name": "订单参数",
           "pathName": "pages/order/index",
           "query": "type=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "商品收藏",
+          "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "搜索中心",
+          "pathName": "pages/search/index",
+          "query": "",
           "scene": null
         }
       ]

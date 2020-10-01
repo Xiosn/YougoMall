@@ -1,63 +1,48 @@
+<!-- pages/goods_detail/index.wxml -->
+<!-- 商品详情页面 -->
 <!-- 轮播图 -->
-<view class="detail_swiper">
-    <swiper 
-    autoplay
-    circular
-    indicator-dots >
-        <swiper-item
-        wx:for="{{goodsObj.pics}}"
-        wx:key="pics_id"
-        bindtap="handlePreviewImage"
-        data-url="{{item.pics_mid}}">
-             <image mode="widthFix" src="{{item.pics_mid}}"/>
-        </swiper-item>
-    </swiper>
+<view class="detail-swiper">
+  <swiper autoplay circular indicator-dots indicator-active-color="#19CAAD">
+    <swiper-item wx:for="{{goodsDeatilData.pics}}" wx:key="pics_id" bind:tap="handlePreviewImg" data-index="{{index}}" >
+      <image class="" src="{{item.pics_mid}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
 </view>
-
-<!-- 商品名称 -->
-<view class="goods_price">￥{{goodsObj.goods_price}}</view>
-<view class="goods_name_row">
-    <view class="goods_name">{{goodsObj.goods_name}}</view>    
-    <view class="goods_collect" bind:tap="handleCollect">
-        <text class="iconfont {{isCollect?'icon-shoucang11':'icon-shoucang'}}" />
-        <view class="collect_text">{{isCollect?"已收藏":"收藏"}}</view>
-    </view>
+<view class="goods-price">￥ {{goodsDeatilData.goods_price}}</view>
+<view class="goods-name-row">
+  <view class="goods-name ellipsis">{{goodsDeatilData.goods_name}}</view>
+  <view class="goods-collect" bind:tap="handleCollect">
+    <text class="iconfont {{isCollect?'icon-shoucang11':'icon-shoucang'}}" />
+    <view class="collect-text">{{isCollect?"已收藏":"收藏"}}</view>
+  </view>
 </view>
-
-<!-- 图文详情 -->
-<view class="goods_info">
-    <view class="goods_info_title">图文详情</view>
-    <view class="goods_info_content">
-        <!-- 富文本 -->
-        <rich-text nodes="{{goodsObj.goods_introduce}}"/>
-    </view>
+<!-- 商品产品介绍 -->
+<view class="goods-info">
+  <view class="goods-info-title">图文详情</view>
+  <view class="goods-info-content">
+    <rich-text class="" nodes="{{goodsDeatilData.goods_introduce}}"></rich-text>
+  </view>
 </view>
-
-<!-- 底部工具栏 -->
-<view class="btn_tool">
-    
-    <view class="tool_item">
-        <view class="iconfont icon-kefu"></view>
-        <view>联系客服</view>
-        <button open-type="contact"></button>
-    </view>
-
-    <view class="tool_item">
-        <view class="iconfont icon-yixianshi-"></view>
-        <view>分享</view>
-        <button open-type="share"></button>
-    </view>
-
-    <navigator url="/pages/cart/index" open-type="switchTab" class="tool_item">
-        <view class="iconfont icon-gouwuche"></view>
-        <view>购物车</view>
-    </navigator>
-
-    <view class="tool_item btn_cart" bindtap="handleCartAdd">
-        <view>加入购物车</view>
-    </view>
-
-    <view class="tool_item btn_buy">
-        <view>立即购买</view>
-    </view>
+<!-- 底部栏 -->
+<view class="btn-tool">
+  <view class="tool-item">
+    <text class="iconfont icon-kefu" />
+    <view>客服</view>
+    <button open-type="contact" class="contact"/>
+  </view>
+  <view class="tool-item">
+    <text class="iconfont icon-yixianshi-" />
+    <view>分享</view>
+    <button open-type="share" class="contact"/>
+  </view>
+  <navigator url="/pages/cart/cart" class="tool-item" open-type="switchTab">
+    <text class="iconfont icon-gouwuche" />
+    <view>购物车</view>
+  </navigator>
+  <view class="tool-item btn-cart" bind:tap="handleCartAdd">
+    <view>加入购物车</view>
+  </view>
+  <view class="tool-item btn-buy">
+    <view>立即购买</view>
+  </view>
 </view>

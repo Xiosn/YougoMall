@@ -1,6 +1,6 @@
 <!-- pages/order/index.wxml -->
 <!-- 订单页面 -->
-<Tabs titles="{{titles}}" bind:tabItemChange="tabItemChange" ></Tabs>
+<Tab titles="{{titles}}" bind:tabItemChange="tabItemChange" ></Tab>
 <!-- 订单列表 -->
 <view class="order-main">
   <view class="order-item" wx:for="{{orderList}}" wx:key="order_id">
