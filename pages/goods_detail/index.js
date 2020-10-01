@@ -21,7 +21,8 @@ Page({
    */
   data: {
     goodsObj:{},
-    goods_id:''
+    goods_id:'',
+    isCollect: false
   },
   //  商品对象
   GoodsInfo:{},
@@ -49,7 +50,24 @@ Page({
       })
     })
   },
-
+  onShow() {
+    let pages = getCurrentPages();
+    let currentPage = pages[pages.length - 1]
+    console.log(currentPage)
+    let options = currentPage.options
+    this.getGoodsDetailData(options)
+    // 1.获取缓存中的购物车数据
+    let collect = wx.getStorageSync("collect") || [];
+    // 2.判断该商品是否存在于缓存数组中
+    // some() 方法用于检测数组中的元素是否满足指定条件（函数提供）
+    let isCollect = collect.some(item => {
+      return item.goods_id === this.GoodsInfo.goods_id
+    })
+    this.setData({
+      goodsInfo: options.goods_id,
+      isCollect
+    })
+  },
   //点击轮播图 放大预览
   handlePreviewImage(e) {
     // 1 先构造要预览的图片数组
@@ -93,5 +111,35 @@ Page({
       mask: true
     }); 
 
-  }
+  },
+   // 收藏事件
+   handleCollect() {
+    // 1.获取缓存中的购物车数据
+    let collect = wx.getStorageSync("collect") || [];
+    // 2.判断该商品是否存在于缓存数组中
+    let index = collect.findIndex(v=>v.goods_id===this.GoodsInfo.goods_id);
+    if (index === -1) {
+      // 表示商品不存在于缓存数组中
+      collect.push(this.GoodsInfo)
+      isCollect=true;
+      wx.showToast({
+        title: '收藏成功',
+        mask: true
+      });
+    } else{
+      // 表示商品存在于缓存数组中,删除该商品
+      //splice修改原数组
+      collect.splice(index,1)
+      isCollect=false;
+      wx.showToast({
+        title: '取消收藏',
+        mask: true
+      });
+    }
+     //把数组存入到缓存中
+     wx.setStorageSync("collect", collect);
+     this.setData({
+       isCollect:!this.data.isCollect
+     })
+   }
 })
