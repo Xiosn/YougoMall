@@ -1,4 +1,4 @@
-# ZZ-Shop
+# YouGoMall
 **项目简介：**
 该商城是基于原生微信小程序来实现的。
 **已完成功能：**
@@ -9,7 +9,6 @@
 - 收藏商品
 - 订单查询
 
-接口在此：https://blog.csdn.net/weixin_43950643/article/details/107796815
 ### 截图如下：
 ##### 首页：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200804205816667.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk1MDY0Mw==,size_16,color_FFFFFF,t_70)
